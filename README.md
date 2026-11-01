@@ -1,8 +1,11 @@
 # AI Skin Specialist
 
-A voice-driven skin consultation assistant. The patient **speaks** their concern and uploads a **photo or video** of the affected skin. The app transcribes the speech, analyses the image with a vision AI model, and replies with short guidance both as **text** and as a **spoken doctor's voice**.
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Render-brightgreen?style=for-the-badge&logo=render)](https://ai-skin-specialist-wimu.onrender.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github)](https://github.com/Manpreett03/AI-Skin-Specialist)
 
-> **Disclaimer:** This is a student project. It gives general information only and is **not a medical diagnosis**. Always consult a licensed dermatologist for real medical concerns.
+> 🌐 **Live Deployed Web App:** [https://ai-skin-specialist-wimu.onrender.com](https://ai-skin-specialist-wimu.onrender.com)
+>
+> ⚠️ **Disclaimer:** This is a student project. It gives general information only and is **not a medical diagnosis**. Always consult a licensed dermatologist for real medical concerns.
 
 ![App screenshot](docs/screenshot.png)
 
