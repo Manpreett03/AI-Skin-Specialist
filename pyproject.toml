@@ -1,7 +1,7 @@
 [project]
-name = "ai-with-hassan"
+name = "ai-skin-specialist"
 version = "0.1.0"
-description = "Add your description here"
+description = "Voice and Vision AI Medical Assistant for Skin Consultation"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [

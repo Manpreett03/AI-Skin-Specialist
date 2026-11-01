@@ -1,0 +1,6 @@
+gradio>=4.0.0
+groq>=1.6.0
+deepgram-sdk>=7.6.0
+opencv-python-headless>=4.8.0
+pillow>=10.0.0
+python-dotenv>=1.0.0

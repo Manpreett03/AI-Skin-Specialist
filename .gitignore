@@ -8,3 +8,14 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Secrets - never commit these
+.env
+
+# Editor settings
+.vscode/
+
+# Generated audio
+*.mp3
+doctor_response.mp3
+output_gtts.mp3

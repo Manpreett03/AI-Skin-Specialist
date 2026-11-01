@@ -11,7 +11,6 @@ APP_TITLE = "AI Skin Specialist"
 
 CSS = """
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
 
 :root {
     --ais-bg: #f7f9fb;
@@ -449,6 +448,109 @@ CSS = """
         line-height: 30px;
     }
 }
+/* ===================== VISUAL POLISH (added) ===================== */
+html, body, .gradio-container {
+    background: linear-gradient(180deg, #e8f0ff 0%, #f4f7fb 360px, #f7f9fb 100%) !important;
+}
+footer:not(.ais-footer) { display: none !important; }              /* hide "Use via API / Built with Gradio" bar */
+
+:root {
+    --ais-primary: #0b57d0;
+    --ais-primary-active: #1a73e8;
+    --ais-teal: #0e9aa7;
+    --ais-card-border: #e1e7f0;
+}
+
+.ais-shell { max-width: 1240px; padding: 32px 32px 40px; }
+.ais-grid { padding: 0 10px !important; }
+
+/* ---- top banner ---- */
+.ais-topbar {
+    background: linear-gradient(120deg, #0a3d91 0%, #0b57d0 52%, #0e9aa7 100%) !important;
+    border: 0 !important;
+    border-radius: 22px !important;
+    box-shadow: 0 18px 40px rgba(11, 87, 208, 0.25);
+    padding: 26px 32px !important;
+    margin-bottom: 36px !important;
+}
+.ais-topbar .ais-brand h1 { color: #ffffff !important; font-size: 30px; font-weight: 750; letter-spacing: -0.02em; line-height: 38px; }
+.ais-topbar .ais-brand p  { color: rgba(255,255,255,0.82) !important; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; margin-top: 6px; }
+.ais-topbar .ais-security {
+    background: rgba(255,255,255,0.16);
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 999px;
+    padding: 10px 18px;
+}
+.ais-topbar .ais-security span:not(.ais-icon) { color: #ffffff !important; font-size: 13px; }
+
+/* ---- icons: emoji so they work offline too ---- */
+.ais-icon {
+    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif !important;
+    font-variation-settings: normal !important;
+    font-size: 20px !important;
+    line-height: 1 !important;
+}
+
+/* ---- section titles ---- */
+.ais-section-title { gap: 12px; margin-bottom: 16px; }
+.ais-section-title .ais-icon {
+    align-items: center; background: #ffffff; border: 1px solid var(--ais-card-border);
+    border-radius: 12px; box-shadow: 0 4px 12px rgba(19,27,46,0.06);
+    display: inline-flex; height: 40px; justify-content: center; width: 40px;
+}
+.ais-section-title h2 { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
+
+/* ---- cards ---- */
+.ais-card {
+    border: 1px solid var(--ais-card-border) !important;
+    border-radius: 22px !important;
+    box-shadow: 0 14px 40px rgba(19, 27, 46, 0.07) !important;
+    padding: 26px !important;
+}
+.ais-field-label { color: var(--ais-text); font-size: 15px; font-weight: 700; letter-spacing: 0; margin-bottom: 4px; }
+
+/* ---- Analyze button ---- */
+.ais-submit-wrap button {
+    background: linear-gradient(120deg, #0b57d0 0%, #1a73e8 55%, #0e9aa7 100%) !important;
+    border: 0 !important;
+    border-radius: 14px !important;
+    box-shadow: 0 10px 24px rgba(11, 87, 208, 0.28) !important;
+    color: #ffffff !important;
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.01em;
+    min-height: 56px !important;
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+.ais-submit-wrap button:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(11, 87, 208, 0.36) !important; }
+.ais-submit-wrap button:active { transform: translateY(0); }
+
+/* ---- hint note ---- */
+.ais-note { background: #eaf2ff; border: 1px solid #cfe0ff; border-radius: 14px; padding: 14px 16px; }
+.ais-note span:not(.ais-icon) { font-size: 12.5px; line-height: 18px; }
+
+/* ---- response card ---- */
+.ais-response-card { min-height: 560px; }
+.ais-empty { min-height: 130px; gap: 10px; }
+.ais-empty .ais-icon {
+    background: linear-gradient(135deg, #e3eeff, #dff6f7) !important;
+    font-size: 36px !important; height: 76px !important; width: 76px !important;
+}
+.ais-empty strong { font-size: 19px; }
+.ais-output-stack { gap: 20px; }
+.ais-output-stack .gradio-textbox textarea { font-size: 16px !important; line-height: 25px !important; border-radius: 12px !important; }
+.ais-card .gradio-textbox > div { border-radius: 14px !important; }
+.ais-audio { border-top: 1px dashed var(--ais-card-border); padding-top: 20px; }
+
+/* ---- disclaimer + footer ---- */
+.ais-security:not(.ais-topbar .ais-security) { font-size: 12.5px; }
+.ais-footer {
+    background: #ffffff; border: 1px solid var(--ais-card-border); border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(19,27,46,0.05); margin-top: 40px; padding: 20px 26px;
+}
+.ais-footer div:last-child { color: var(--ais-muted); font-weight: 600; }
+/* =================== END VISUAL POLISH =================== */
+
 """
 
 
@@ -480,7 +582,7 @@ with gr.Blocks(title=APP_TITLE) as iface:
                     <p>VOICE, IMAGE, AND VIDEO BASED SKIN CONSULTATION ASSISTANT</p>
                 </div>
                 <div class="ais-security">
-                    <span class="ais-icon">security</span>
+                    <span class="ais-icon">🔒</span>
                     <span>Privacy-first consultation</span>
                 </div>
             </header>
@@ -492,7 +594,7 @@ with gr.Blocks(title=APP_TITLE) as iface:
                 gr.HTML(
                     """
                     <div class="ais-section-title">
-                        <span class="ais-icon">clinical_notes</span>
+                        <span class="ais-icon">📋</span>
                         <h2>Patient Input</h2>
                     </div>
                     """
@@ -524,7 +626,7 @@ with gr.Blocks(title=APP_TITLE) as iface:
                     gr.HTML(
                         """
                         <div class="ais-note">
-                            <span class="ais-icon">info</span>
+                            <span class="ais-icon">ℹ️</span>
                             <span>For better assessment, include a short video showing the affected area from multiple angles and under good lighting.</span>
                         </div>
                         """
@@ -534,7 +636,7 @@ with gr.Blocks(title=APP_TITLE) as iface:
                 gr.HTML(
                     """
                     <div class="ais-section-title">
-                        <span class="ais-icon">smart_toy</span>
+                        <span class="ais-icon">🩺</span>
                         <h2>Doctor Response</h2>
                     </div>
                     """
@@ -544,7 +646,7 @@ with gr.Blocks(title=APP_TITLE) as iface:
                     gr.HTML(
                         """
                         <div class="ais-empty">
-                            <span class="ais-icon">pending_actions</span>
+                            <span class="ais-icon">🩺</span>
                             <div>
                                 <strong>Ready for Analysis</strong>
                                 <p class="ais-panel-copy">Your consultation summary, transcript, and guidance will appear below after analysis.</p>
@@ -575,7 +677,7 @@ with gr.Blocks(title=APP_TITLE) as iface:
                 gr.HTML(
                     """
                     <div class="ais-security" style="justify-content:center; margin-top:16px;">
-                        <span class="ais-icon">verified</span>
+                        <span class="ais-icon">✅</span>
                         <span>AI guidance is informational and not a medical diagnosis</span>
                     </div>
                     """
